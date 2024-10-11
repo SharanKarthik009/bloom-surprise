@@ -1,0 +1,74 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f8ff;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+button {
+    background-color: #ff69b4;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+.flower-container {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.flower {
+    width: 100px;
+    height: 100px;
+    background-color: #ff69b4;
+    border-radius: 50%;
+    position: relative;
+}
+
+.flower::before, .flower::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: inherit;
+    border-radius: 50%;
+}
+
+.flower::before {
+    top: -40px;
+    left: 0;
+}
+
+.flower::after {
+    top: 40px;
+    left: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+#surpriseMessage, #secondMessage, #thirdMessage {
+    margin-top: 20px;
+    font-size: 24px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
